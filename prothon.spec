@@ -81,7 +81,7 @@ Requires:	%{name} = %{version}-%{release}
 
 %description examples
 This package contains example programs for Prothon programming
-language.  Theses programs were written as a simple tutorial, which
+language. Theses programs were written as a simple tutorial, which
 shows most common language features.
 
 %description examples -l pl
