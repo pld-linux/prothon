@@ -80,8 +80,8 @@ http://web.media.mit.edu/~lieber/Lieberary/OOP/Delegation/Delegation.html.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/prothon-%{pr_libver}}
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
@@ -92,4 +92,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES.txt README.txt LICENSE STATUS.txt
 %attr(755,root,root) %{_bindir}/*
+%dir %{_libdir}/prothon-%{pr_libver}
 %attr(755,root,root) %{_libdir}/prothon-%{pr_libver}/*.so
