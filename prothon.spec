@@ -1,16 +1,16 @@
 
-%define		pr_build	b585
+%define		pr_build	b711
 %define		pr_libver	0.0
 
 Summary:	Prototype-oriented scripting programming language
 Summary(pl):	Zorientowany na prototypy skryptowy jêzyk programowania
 Name:		prothon
-Version:	0.1.1
-Release:	2
+Version:	0.1.2
+Release:	1
 License:	HCA
 Group:		Development/Languages
 Source0:	http://prothon.org/pub/prothon/%{name}-%{version}-%{pr_build}.tar.gz
-# Source0-md5:	5b47e41707d7a08310c3504339e59394
+# Source0-md5:	71bfef4e0269be720bc4236671bfdbfe
 URL:		http://prothon.org/
 BuildRequires:	apr-util-devel
 BuildRequires:	bison
@@ -70,18 +70,6 @@ programowania obiektowego warto zapoznaæ siê z dokumentem dostêpnym
 pod linkiem
 http://web.media.mit.edu/~lieber/Lieberary/OOP/Delegation/Delegation.html.
 
-%package examples
-Summary:	Examples for Prothon programming language
-Summary(pl):	Przyk³ady w jêzyku programowania Prothon
-Group:		Development/Languages
-Requires:	%{name} = %{version}-%{release}
-
-%description examples
-This package contains example files for Prothon programming language.
-
-%description examples -l pl
-Pakiet zawieraj±cy przyk³adowe skrypty w jêzyku programowania Prothon.
-
 %prep
 %setup -q -n %{name}-%{version}-%{pr_build}
 
@@ -92,24 +80,19 @@ Pakiet zawieraj±cy przyk³adowe skrypty w jêzyku programowania Prothon.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/prothon-%{pr_libver},%{_examplesdir}/%{name}-%{version}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/prothon-%{pr_libver}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/prothon-%{pr_libver}/*.{la,a}
-cp -ra pr/tutorial $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES.txt README.txt LICENSE STATUS.txt
+%doc CHANGES.txt LICENSE README.txt STATUS.txt
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/prothon-%{pr_libver}
 %attr(755,root,root) %{_libdir}/prothon-%{pr_libver}/*.so
-
-%files examples
-%defattr(644,root,root,755)
-%{_examplesdir}/%{name}-%{version}
