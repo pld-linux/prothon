@@ -70,6 +70,18 @@ programowania obiektowego warto zapoznaæ siê z dokumentem dostêpnym
 pod linkiem
 http://web.media.mit.edu/~lieber/Lieberary/OOP/Delegation/Delegation.html.
 
+%package examples
+Summary:	Examples for Prothon programming language
+Summary(pl):	Przyk³ady w jêzyku programowania Prothon
+Group:		Development/Languages
+Requires:	%{name} = %{version}-%{release}
+
+%description examples
+This package contains example files for Prothon programming language.
+
+%description examples -l pl
+Pakiet zawieraj±cy przyk³adowe skrypty w jêzyku programowania Prothon.
+
 %prep
 %setup -q -n %{name}-%{version}-%{pr_build}
 
@@ -97,4 +109,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/prothon-%{pr_libver}
 %attr(755,root,root) %{_libdir}/prothon-%{pr_libver}/*.so
+
+%files examples
+%defattr(644,root,root,755)
 %{_examplesdir}/%{name}-%{version}
