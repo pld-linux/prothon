@@ -6,16 +6,19 @@ Summary:	Prototype-oriented scripting programming language
 Summary(pl):	Zorientowany na prototypy skryptowy jêzyk programowania
 Name:		prothon
 Version:	0.1.2
-Release:	1
+Release:	2
 License:	HCA
 Group:		Development/Languages
 Source0:	http://prothon.org/pub/prothon/%{name}-%{version}-%{pr_build}.tar.gz
 # Source0-md5:	71bfef4e0269be720bc4236671bfdbfe
+Source1:	http://prothon.org/pub/prothon/tutorial.zip
+# Source1-md5:	d1b46ddf2b94c398f3a0e919bebd5bd1
 URL:		http://prothon.org/
 BuildRequires:	apr-util-devel
 BuildRequires:	bison
 BuildRequires:	boost-regex-devel
 BuildRequires:	sqlite-devel
+BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -70,8 +73,26 @@ programowania obiektowego warto zapoznaæ siê z dokumentem dostêpnym
 pod linkiem
 http://web.media.mit.edu/~lieber/Lieberary/OOP/Delegation/Delegation.html.
 
+%package examples
+Summary:	Example Prothon programs
+Summary(pl):	Przyk³ady programy napisane w Prothonie
+Group:		Development/Languages
+Requires:	%{name} = %{version}-%{release}
+
+%description examples
+This package contains example programs for Prothon programming
+language.  Theses programs were written as a simple tutorial, which
+shows most common language features.
+
+%description examples -l pl
+Ten pakiet zawiera przyk³adowe programy napisane w jêzyku Prothon.
+Programy te napisane zosta³y w postaci prostego tutoriala
+wprowadzaj±cego programistê w kolejne mo¿liwo¶ci tego jêzyka
+programowania.
+
 %prep
 %setup -q -n %{name}-%{version}-%{pr_build}
+unzip -d . %{SOURCE1}
 
 %build
 %configure
@@ -80,12 +101,14 @@ http://web.media.mit.edu/~lieber/Lieberary/OOP/Delegation/Delegation.html.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/prothon-%{pr_libver}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/prothon-%{pr_libver},%{_examplesdir}/%{name}-%{version}}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/prothon-%{pr_libver}/*.{la,a}
+
+cp -ar tutorial/ $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -96,3 +119,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/prothon-%{pr_libver}
 %attr(755,root,root) %{_libdir}/prothon-%{pr_libver}/*.so
+
+%files examples
+%defattr(644,root,root,755)
+%{_examplesdir}/%{name}-%{version}
