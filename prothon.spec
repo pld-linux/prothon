@@ -6,7 +6,7 @@ Summary:	Prototype-oriented scripting programming language
 Summary(pl):	Zorientowany na prototypy skryptowy jêzyk programowania
 Name:		prothon
 Version:	0.1.1
-Release:	1
+Release:	2
 License:	HCA
 Group:		Development/Languages
 Source0:	http://prothon.org/pub/prothon/%{name}-%{version}-%{pr_build}.tar.gz
