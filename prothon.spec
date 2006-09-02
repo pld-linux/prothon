@@ -108,7 +108,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/prothon-%{pr_libver},%{_example
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/prothon-%{pr_libver}/*.{la,a}
 
-cp -ar tutorial/ $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a tutorial/ $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
