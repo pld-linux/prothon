@@ -3,7 +3,7 @@
 %define		pr_libver	0.0
 
 Summary:	Prototype-oriented scripting programming language
-Summary(pl):	Zorientowany na prototypy skryptowy jêzyk programowania
+Summary(pl.UTF-8):   Zorientowany na prototypy skryptowy jÄ™zyk programowania
 Name:		prothon
 Version:	0.1.2
 Release:	2
@@ -45,37 +45,37 @@ For an in-depth look at Prototypes versus Classes, check
 http://web.media.mit.edu/~lieber/Lieberary/OOP/Delegation/Delegation.html
 link.
 
-%description -l pl
-Prothon jest nowym, zorientowanym obiektowo jêzykiem programowania,
-pozbawionym pojêcia klasy (w taki sam sposób, jak to robi Self z
-jêzykiem Java). Prothon zachowuje praktyczne i jednocze¶nie zabawne
-w³a¶ciwo¶ci Pythona, zauwa¿alne w pocz±tkach jego powstawania - jest
-interpretowanym, zorientowanym obiektowo jêzykiem, umo¿liwiaj±cym
-programowanie w sposób praktyczny, skuteczny i jednocze¶nie weso³y.
+%description -l pl.UTF-8
+Prothon jest nowym, zorientowanym obiektowo jÄ™zykiem programowania,
+pozbawionym pojÄ™cia klasy (w taki sam sposÃ³b, jak to robi Self z
+jÄ™zykiem Java). Prothon zachowuje praktyczne i jednoczeÅ›nie zabawne
+wÅ‚aÅ›ciwoÅ›ci Pythona, zauwaÅ¼alne w poczÄ…tkach jego powstawania - jest
+interpretowanym, zorientowanym obiektowo jÄ™zykiem, umoÅ¼liwiajÄ…cym
+programowanie w sposÃ³b praktyczny, skuteczny i jednoczeÅ›nie wesoÅ‚y.
 
-Python jest ¶wietnym jêzykiem interpretowanym, lecz podczas jego
-d³ugiego rozwoju mnóstwo w³a¶ciwo¶ci zosta³o dodanych do rdzenia
-jêzyka, przy jednoczesnym staraniu siê o zachowanie kompatybilno¶ci z
-wcze¶niejszymi wersjami, w wyniku czego Python sta³ siê prze³adowany
-konstrukcjami, czasami bardzo z³o¿onymi. Przyk³adem takiej konstrukcji
-jest pojêcie metaklasy. Nawet eksperci Pythona uwa¿aj± pojêcie to za
-co najmniej ciê¿ko zrozumia³e.
+Python jest Å›wietnym jÄ™zykiem interpretowanym, lecz podczas jego
+dÅ‚ugiego rozwoju mnÃ³stwo wÅ‚aÅ›ciwoÅ›ci zostaÅ‚o dodanych do rdzenia
+jÄ™zyka, przy jednoczesnym staraniu siÄ™ o zachowanie kompatybilnoÅ›ci z
+wczeÅ›niejszymi wersjami, w wyniku czego Python staÅ‚ siÄ™ przeÅ‚adowany
+konstrukcjami, czasami bardzo zÅ‚oÅ¼onymi. PrzykÅ‚adem takiej konstrukcji
+jest pojÄ™cie metaklasy. Nawet eksperci Pythona uwaÅ¼ajÄ… pojÄ™cie to za
+co najmniej ciÄ™Å¼ko zrozumiaÅ‚e.
 
-Prothon jest zatem mocn± alternatyw± dla Pythona i Selfa. Wykorzystuje
-natywne implementacje w±tków oraz 64-bitow± architekturê w celu
-zmaksymalizowania wydajno¶ci w aplikacjach takich jak wieloprocesorowy
-hosting. Jêzyk posiada te¿ unikalny model zapewniania bezpieczeñstwa
-oraz transakcyjny sposób przechowywania i modyfikacji w³a¶ciwo¶ci
-obiektów, wbudowany w strukturê obiektu.
+Prothon jest zatem mocnÄ… alternatywÄ… dla Pythona i Selfa. Wykorzystuje
+natywne implementacje wÄ…tkÃ³w oraz 64-bitowÄ… architekturÄ™ w celu
+zmaksymalizowania wydajnoÅ›ci w aplikacjach takich jak wieloprocesorowy
+hosting. JÄ™zyk posiada teÅ¼ unikalny model zapewniania bezpieczeÅ„stwa
+oraz transakcyjny sposÃ³b przechowywania i modyfikacji wÅ‚aÅ›ciwoÅ›ci
+obiektÃ³w, wbudowany w strukturÄ™ obiektu.
 
-W celu dok³adnego porównania zorientowanego na prototypy i na klasy
-programowania obiektowego warto zapoznaæ siê z dokumentem dostêpnym
+W celu dokÅ‚adnego porÃ³wnania zorientowanego na prototypy i na klasy
+programowania obiektowego warto zapoznaÄ‡ siÄ™ z dokumentem dostÄ™pnym
 pod linkiem
 http://web.media.mit.edu/~lieber/Lieberary/OOP/Delegation/Delegation.html.
 
 %package examples
 Summary:	Example Prothon programs
-Summary(pl):	Przyk³ady programy napisane w Prothonie
+Summary(pl.UTF-8):   PrzykÅ‚ady programy napisane w Prothonie
 Group:		Development/Languages
 Requires:	%{name} = %{version}-%{release}
 
@@ -84,10 +84,10 @@ This package contains example programs for Prothon programming
 language. Theses programs were written as a simple tutorial, which
 shows most common language features.
 
-%description examples -l pl
-Ten pakiet zawiera przyk³adowe programy napisane w jêzyku Prothon.
-Programy te napisane zosta³y w postaci prostego tutoriala
-wprowadzaj±cego programistê w kolejne mo¿liwo¶ci tego jêzyka
+%description examples -l pl.UTF-8
+Ten pakiet zawiera przykÅ‚adowe programy napisane w jÄ™zyku Prothon.
+Programy te napisane zostaÅ‚y w postaci prostego tutoriala
+wprowadzajÄ…cego programistÄ™ w kolejne moÅ¼liwoÅ›ci tego jÄ™zyka
 programowania.
 
 %prep
