@@ -3,7 +3,7 @@
 %define		pr_libver	0.0
 
 Summary:	Prototype-oriented scripting programming language
-Summary(pl.UTF-8):   Zorientowany na prototypy skryptowy język programowania
+Summary(pl.UTF-8):	Zorientowany na prototypy skryptowy język programowania
 Name:		prothon
 Version:	0.1.2
 Release:	2
@@ -75,7 +75,7 @@ http://web.media.mit.edu/~lieber/Lieberary/OOP/Delegation/Delegation.html.
 
 %package examples
 Summary:	Example Prothon programs
-Summary(pl.UTF-8):   Przykłady programy napisane w Prothonie
+Summary(pl.UTF-8):	Przykłady programy napisane w Prothonie
 Group:		Development/Languages
 Requires:	%{name} = %{version}-%{release}
 
