@@ -16,7 +16,7 @@ Source1:	http://prothon.org/pub/prothon/tutorial.zip
 URL:		http://prothon.org/
 BuildRequires:	apr-util-devel
 BuildRequires:	bison
-BuildRequires:	boost-regex-devel
+BuildRequires:	boost-devel >= 1.35.0
 BuildRequires:	sqlite-devel
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
